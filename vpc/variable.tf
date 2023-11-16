@@ -1,19 +1,16 @@
-variable "my-network" {
+variable "network" {
   
 }
-
-variable "project_ID" {
-  type           = string
-  description  = "Project ID"
-  default        = "<your-project-id>"
+variable "project_id" {
+type = string
 }
-variable "subnet-name"{
+variable "subnet_name"{
 
 }
-variable "subnet-region" {
+variable "subnet_region" {
   
 }
-variable "subnet-cidr" {
+variable "subnet_cidr" {
   
 }
 variable "firewall_name" {
@@ -22,4 +19,10 @@ variable "firewall_name" {
 
 variable "source_ip_ranges" {
   type    = list(string)
+}
+variable "protocol" {
+  
+}
+variable "ports" {
+  
 }

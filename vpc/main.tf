@@ -1,22 +1,23 @@
 provider "google" {
 
-  project     = var.project_ID
+  project     = var.project_id
 }
 
 # create a VPC 
 
 resource "google_compute_network" "network" {
 
-  name = var.my-network
+  name = var.network
+  auto_create_subnetworks = "false"
 }
 
 # creating a subnet
 
 resource "google_compute_subnetwork" "subnet" {
-    name = var.subnet-name
-    region = var.subnet-region
+    name = var.subnet_name
+    region = var.subnet_region
     network = google_compute_network.network.name
-    ip_cidr_range =  var.subnet-cidr
+    ip_cidr_range =  var.subnet_cidr
 }
 
 # creating firewall
@@ -26,11 +27,7 @@ resource "google_compute_firewall" "vpc_network" {
   network = google_compute_network.network.name
   source_ranges =var.source_ip_ranges
   allow {
-    protocol = "tcp"
-    ports    = ["22"]
+    protocol = var.protocol
+    ports    = var.ports
   }
-
-
-
- depends_on = [google_compute_instance.my_instance ]
 }

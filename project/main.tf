@@ -1,6 +1,6 @@
-resource "google_project" "project1" {
-  name       = "project1"
-  project_id = "project1"
-  org_id     = "YOUR_ORG_ID"
-  folder_id  = google_folder.subfolder.name
+resource "google_project" "project" {
+    name = var.project_name
+    project_id = var.project_id
+    org_id   = var.org_id
+    folder_id  = var.sub_folder_id
 }
