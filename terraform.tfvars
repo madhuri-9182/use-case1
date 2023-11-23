@@ -1,22 +1,40 @@
 folder_name = "IT"
 
-org_id =   "183514472791"
+org_id =   "organizations/183514472791"
 
 sub_folder = "CIS"
 
-folder_id = "682659926798"
+folder_id = "folders/682659926798"
 
 project_name = "madhuri-sceg041"
 
 project_id = "madhuri-sceg041"
 
-sub_folder_id = "880609345945"
+sub_folder_id = "folders/880609345945"
 
 service_id = "sceg"
 
 service_display = "sceg"
 
-roles = "roles/compute.admin"
+role1 = "roles/compute.admin"
+
+role2 = ""
+
+role3 = ""
+
+role4 = ""
+
+role5 = ""
+
+role6 = ""
+
+role7 = ""
+
+role8 = ""
+
+role9 = ""
+
+role10 = ""
 
 network = "vpc-network"
 
@@ -36,9 +54,9 @@ ports = ["22"]
 
 vm_device_name = "my-instance"
 
-disk_type = "e2-medium"
+disk_type = "pd-balanced"
 
-machine_type = "pd-balanced"
+machine_type = "e2-medium"
 
 instance_name = "instance"
 

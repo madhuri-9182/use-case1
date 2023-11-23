@@ -1,3 +1,6 @@
+variable "project_id" {
+  
+}
 variable "vm_device_name" {
   
 }
@@ -20,5 +23,11 @@ variable "size" {
   
 }
 variable "image" {
+  
+}
+variable "network_interface" {
+  
+}
+variable "subnetwork_interface" {
   
 }

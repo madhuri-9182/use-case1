@@ -1,5 +1,14 @@
+terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+      version = "5.5.0"
+    }
+  }
+}
 provider "google" {
   credentials = file("key.json")
+  project = "quick-composite-404605"
 }
 
 resource "google_folder" "my_folder" {
